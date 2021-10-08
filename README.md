@@ -1,7 +1,7 @@
 # NMCNPM
 Team: Hổ mọc thêm cánh
 
-Member:
+Member:\
 1, 19127094	Phạm Ngọc Thiên Ân      *\
 2, 19127494	Đỗ Minh Nhật\
 3, 19127618	Nguyễn Thanh Tùng\
