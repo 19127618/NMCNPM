@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="./css_setting/css_setting.css">
+    <link rel="stylesheet" href="./css_setting/responsive_setting.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="st_header">
+        <!-- navbar -> bổ sung sau (dùng chung voi home page) -->
+        <div class="st_navbar"></div>
+    </div>
+    <!-- content -->
+    <div class="st_body">
+
+        <div class="st_sidebar">
+            <div class="st_sidebar__header"></div>
+            <div class="st_sidebar__content">
+                <div class="st_sidebar__content-list">
+                    
+                    <div class="st_sidebar__content-item js-infoPage">
+                        <i class="ti-user st_sidebar__content-icon"></i>
+                        <span class="st_sidebar__content-text">Change information</span>
+                    </div>
+                    <div class="st_sidebar__content-item js-passPage">
+                        <i class="ti-key st_sidebar__content-icon"></i>
+                        <span class="st_sidebar__content-text">Change password</span>
+                    </div>
+                    <div class="st_sidebar__content-item js-avtPage">
+                        <i class="ti-key st_sidebar__content-icon"></i>
+                        <span class="st_sidebar__content-text">Change avatar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="st_sidebar__footer"></div>
+        </div>
+        <div class="st_container">
+            <!-- info -->
+            <div class="st_content info-page">
+                <h2 class="st_content__header">General Account Setting</h2>
+                <ul class="st_content__list">
+                    <li class="st_content__item">
+                        <a href="#" class="st_item__link">
+                            <span class="st_item__link-title st_item__text--bold">Name</span>
+                            <span class="st_item__link-content st_item__text--bold">Nguyễn Thanh Tùng</span>
+                            <span class="st_item__link-editBtn">
+                                <i class="ti-pencil st_item__link-icon"></i>Edit</span>
+                        </a>                
+                    </li>
+                    <li class="st_content__item">
+                        <a href="#" class="st_item__link">
+                            <span class="st_item__link-title st_item__text--bold">Email</span>
+                            <span class="st_item__link-content">ntt@ntt.ntt</span>
+                            <span class="st_item__link-editBtn">
+                                <i class="ti-pencil st_item__link-icon"></i>Edit</span>
+                        </a>                
+                    </li>
+                    <li class="st_content__item">
+                        <a href="#" class="st_item__link">
+                            <span class="st_item__link-title st_item__text--bold">Phone number</span>
+                            <span class="st_item__link-content">0396912560</span>
+                            <span class="st_item__link-editBtn">
+                                <i class="ti-pencil st_item__link-icon"></i>Edit</span>
+                        </a>                
+                    </li>
+                </ul>
+            </div>
+            <!-- password -->
+            <div class="st_content password-page">
+                <h2 class="st_content__header">Change password</h2>
+                <form action="" class="st_password">
+                    <span class="st_password__frames">
+                        <span class="st_password__label">Current</span>
+                        <input type="password" class="st_password__input" required>
+                    </span>
+                    <span class="st_password__frames">
+                        <span class="st_password__label">New</span>
+                        <input type="password" class="st_password__input" required>
+                    </span>
+                    <span class="st_password__frames">
+                        <span class="st_password__label">Re-type new</span>
+                        <input type="password" class="st_password__input" required>
+                    </span>
+                    <input type="submit" value="Save changes" class="st_password__submit">
+                </form>
+            </div>
+
+            <!-- avatar -->
+            <div class="st_content avatar-page">
+                <h2 class="st_content__header">Change Avatar</h2>
+                <form action="" class="st_avt">
+                    <label for="img">Select image: </label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                    <input type="submit" value="submit">
+                </form>
+                <H1>Tính năng chưa hoàn thiện</H1>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="st_footer"></div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js_setting/js_setting.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+/* Tablet */
+@media (min-width: 460px) and (max-width: 960px) {
+    /* change info */
+    .st_item__link-editBtn {
+        display: none;
+    }
+    .st_content{
+        min-width: 450px;
+    }
+}
+@media (min-width: 460px) and (max-width: 650px) {
+    .st_sidebar {
+        width: 100px;
+    }
+}
