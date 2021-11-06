@@ -22,14 +22,14 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-    $('.carousel').carousel({
-        interval: 4000
-    })
+    // $('.carousel').carousel({
+    //     interval: 4000
+    // })
 
-    $(window).load(function() {
-        $("#preloader").on(500).fadeOut();
-        $(".preloader").on(600).fadeOut("slow");
-    });
+    // $(window).load(function() {
+    //     $("#preloader").on(500).fadeOut();
+    //     $(".preloader").on(600).fadeOut("slow");
+    // });
 
     jQuery(window).scroll(function(){
         if (jQuery(this).scrollTop() > 1) {

@@ -598,7 +598,7 @@ div.tab button:hover {
 
 .footer {
     padding: 4rem 0 4rem;
-    background: url(images/footer.png) repeat-x center bottom #edeff2;
+    /* background: url(images/footer.png) repeat-x center bottom #edeff2; */
 }
 
 .footer.wb {
@@ -678,13 +678,13 @@ div.tab button:hover {
 }
 
 .dmtop {
-    background-color: #111111;
-    background-image: url(images/arrow.png);
+    background-image: url(../image/1\ \(1\).png);
+    background-size: 50px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     text-indent: -99999px;
     position: fixed;
     bottom: -100px;
@@ -695,7 +695,7 @@ div.tab button:hover {
     -o-transition: all .7s ease-in-out;
     -ms-transition: all .7s ease-in-out;
     transition: all .7s ease-in-out;
-    overflow: auto;
+    overflow: hidden;
 }
 
 

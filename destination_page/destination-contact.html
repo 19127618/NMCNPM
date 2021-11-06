@@ -22,22 +22,22 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet"> 
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
 
     <!-- FontAwesome Icons core CSS -->
-    <link href="./assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 
     <!-- Responsive styles for this template -->
-    <link href="./assets/css/responsive.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
 
     <!-- Colors for this template -->
-    <link href="./assets/css/colors.css" rel="stylesheet">
+    <link href="../assets/css/colors.css" rel="stylesheet">
 
     <!-- Version Garden CSS for this template -->
-    <link href="./assets/css/version/garden.css" rel="stylesheet">
+    <link href="../assets/css/version/garden.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -64,10 +64,10 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6 hidden-xs-down">
                         <div class="topsocial">
-                            <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.youtube.com/" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a>
-                            <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.google.com/" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://www.facebook.com/" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.google.com/" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
                         </div><!-- end social -->
                     </div><!-- end col -->
 
@@ -88,7 +88,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo">
-                            <a href="garden-index.html"><img src="images/version/Destination.png" style="width:30%; height: 30%" alt=""></a>
+                            <a href="#"><img src="images/version/Destination.png" style="width:30%; height: 30%" alt=""></a>
                         </div><!-- end logo -->
                     </div>
                 </div><!-- end row -->
@@ -98,9 +98,9 @@
         <header class="header">
             <div class="container">
                 <nav class="navbar navbar-inverse navbar-toggleable-md">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Forest Timemenu" aria-controls="Forest Timemenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Forest Timemenu" aria-controls="Forest Timemenu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
                     <div class="collapse navbar-collapse justify-content-md-center" id="Forest Timemenu">
                         <ul class="navbar-nav">
                             <li class="nav-item">
@@ -171,10 +171,10 @@
                                 <a href="index.html"><img src="images/version/Destination_down.png" alt="" class="img-fluid"></a>
                                 <p>Blog time is travelling time, travelling time is colouring your life</p>
                                 <div class="social">
-                                    <a href="https://www.facebook.com/" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
-                                    <a href="https://www.twitter.com/" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.google.com/" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="https://www.facebook.com/" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                    <a href="https://www.twitter.com/" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.google.com/" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
                                 </div>
 
                                 <hr class="invis">
@@ -199,15 +199,20 @@
             </div><!-- end container -->
         </footer><!-- end footer -->
 
-        <div class="dmtop">Scroll to Top</div>
+        <div class="dmtop" style="background-color: transparent !important;"></div>
         
     </div><!-- end wrapper -->
 
     <!-- Core JavaScript
     ================================================== -->
-    <script src="js/jquery.min.js"></script>
+    <!-- Import jQuery -->
+    <script src="../assets/jquery/jquery-3.6.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
     <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAkADq7R0xf6ami9YirAM1N-yl7hdnYBhM "></script>
    <!-- MAP & CONTACT -->
