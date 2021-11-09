@@ -1,0 +1,133 @@
+#images figure{
+    display: flex;
+    justify-content: center;
+    min-width: 216px;
+}
+#images img{
+    max-width: 500px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#uploadImg input[type="file"] {
+    display: none;
+}
+#uploadImg p{
+    display: block;
+    
+}
+p{
+    margin: 0;
+}
+.another-info {
+    align-items: center;
+    align-self: center;
+}
+.price, .vehical select{
+    border: 0.5px solid rgba(100,100,100,0.2);
+    padding: 8px;
+    height: 42px;
+    margin: 16px 0px;
+    width: 49%;
+    border-radius: 4px;
+    
+}
+.price{
+    /* overflow: hidden; */
+    position: relative;
+}
+.price input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    outline: none;
+    
+}
+.price .unit{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.price .unit select{
+    padding: 8px;
+    height: 38px;
+    border: none;
+    outline: none;
+    
+}
+
+.vehical{
+    display: flex;
+    justify-content: end;
+    width: 49%;
+
+
+
+}
+.vehical select{
+    width: 100%;
+    outline: none;
+
+}
+option{
+    border: 1px solid red;
+}
+
+.full-size{
+    min-width: 100px;
+    max-width: 300px;
+}
+.mini-size{
+    min-width: 100px;
+}
+
+
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.full-size .icon{
+    margin-right: 4px;
+    display: inline-block;
+    font-size: 16px;
+}
+.icon{
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+@media (min-width: 760px) and (max-width: 1000px) {
+    .full-size .icon{
+        /* margin-right: 8px; */
+        display: block;
+        padding-bottom: 8px;
+        text-align: center;
+        
+    }
+    .sidebar-link{
+        display: flex;
+        flex-direction: column;
+        padding: 12px !important;
+    }
+}
+
+
+
+@media (max-width: 760px) {
+    .full-size{
+        display: none;
+    }
+    .sidebar{
+        width: 100px;
+    }
+}
+@media (min-width: 761px) {
+    .mini-size{
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+#images figure{
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 500px;
+}
+#images img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+input[type="file"] {
+    display: none;
+}

@@ -11,71 +11,226 @@
     <script src="../assets/Trumbowyg-main/dist/trumbowyg.min.js"></script>
     <link rel="stylesheet" href="../assets/Trumbowyg-main/dist/ui/trumbowyg.min.css">
     
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./uploadImg.css">
+  
     <style>
         .trumbowyg-box,
         .trumbowyg-editor {
             min-height: 400px;
         }
     </style>
-
 </head>
 <body>
-
-    <div class="container-xxl d-flex flex-column min-vh-100" style="min-width: 200px;">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <!-- <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a> -->
-    
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link d-flex justify-content-start px-2 link-secondary">Home</a></li>
-                <!-- <li><a href="#" class="nav-link px-2 link-dark">Features</a></li> -->
-                <!-- <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li> -->
-                <!-- <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li> -->
-                <!-- <li><a href="#" class="nav-link px-2 link-dark">About</a></li> -->
-            </ul>
-        
-            <div class="col-md-3 text-end">
-                <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
-                <button type="button" class="btn btn-primary">Logout</button>
+    <div class="container-fluid row d-flex flex-nowrap min-vh-100" style="min-width: 200px; padding-left: 4px;">
+        <!-- sidebar -->
+        <div class="sidebar col-2 rounded min-vh-100" style="min-width: 100px;">
+            <div class="full-size">
+                <div class="d-flex flex-sm-column flex-shrink-0 p-0 bg-light" style="width: 100%;">
+                    <a href="/" class="logo d-flex flex-wrap align-items-center justify-content-center mb-2 mb-md-0 mt-3 link-dark text-decoration-none">
+                      <img src="../assets/image/1 (1).png" alt="logo">
+                      <span class="fs-4">Sidebar</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-auto mt-2">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link active d-flex flex-wrap justify-content-center align-items-center sidebar-link" aria-current="page">
+                            <i class="icon fas fa-home"></i> <span>Home</span> 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-tachometer-alt"></i> <span>Dashboard</span> 
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-user"></i> <span>Customers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-user"></i> <span>Customers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-user"></i> <span>Customers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-user"></i> <span>Customers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link link-dark d-flex flex-wrap justify-content-center align-items-center sidebar-link">
+                            <i class="icon fas fa-user"></i> <span>Customers</span>
+                        </a>
+                      </li>
+                    </ul>
+                   
+                  </div>
             </div>
-        </header>
-
-        <!-- body -->
-        <div class="row d-flex flex-nowrap mt-2 mb-2">
-            <!-- sidebar1 -->
-            <div class="col-12 col-md-2 d-flex-column justify-content-center align-items-center border rounded d-none d-md-block">
-                <p>sidebar 1 here!</p>
-                <p>border để nhìn cho rõ, sau bỏ đi</p>
-            </div>
-
-            <!-- editor -->
-            <div class="col-12 col-md-8">
-                <form action="" class="form-group flex-md-column d-flex flex-wrap align-items-end">
-                    <textarea name="" id="trumbowyg" cols="30" rows="10" placeholder="Enter your text"></textarea>
-                    <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>
-                </form>
-            </div>
-
-            <!-- sidebar2 -->
-            <div class="col-12 col-md-2 d-flex-column justify-content-center align-items-center border rounded d-none d-md-block">
-                <p>sidebar 2 here!</p>
-                <p>sidebar 2 here!</p>
+            <div class="mini-size">
+                <div class="d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+                    <a href="/" class="logo d-block p-3 link-dark text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+                        <img src="../assets/image/1 (1).png" alt="logo">
+                      <span class="visually-hidden">Icon-only</span>
+                    </a>
+                    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-home"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-tachometer-alt"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-user"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-user"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-user"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-user"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="nav-link py-3 border-bottom" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                            <i class="icon fas fa-user"></i>
+                        </a>
+                      </li>
+                    </ul>
+                    
+                  </div>
             </div>
         </div>
 
-        <!-- footer -->
-        <footer class="py-3 my-4 mt-auto">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li> -->
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            </ul>
-            <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
-        </footer>
+
+        <!-- content -->
+        <div class="content d-flex flex-column min-vh-100 col-10" style="min-width: 200px;" >
+            <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+                <!-- <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                </a> -->
+          
+                  <!-- <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                      <li><a href="#" class="nav-link d-flex justify-content-start px-2 link-secondary">Home</a></li>
+                      <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+                      <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+                      <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+                      <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+                  </ul> -->
+              
+                  <div class="col-md-12 text-end">
+                      <!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
+                      <button type="button" class="btn btn-primary">Logout</button>
+                  </div>
+              </header>
+      
+              <!-- body -->
+              <div class="row d-flex flex-nowrap mt-2 m-2">
+                  <!-- sidebar1 -->
+                  <!-- <div class="col-12 col-md-2 d-flex-column justify-content-center align-items-center border rounded d-none d-md-block">
+                      
+                      <p>sidebar 1 here!</p>
+                      <p>border để nhìn cho rõ, sau bỏ đi</p>
+                  </div> -->
+      
+                  <!-- editor -->
+                  <div class="col-md-12 mt-3">
+                      <form action="" class="form-group flex-md-column d-flex flex-wrap justify-content-center" method="">
+      
+                          <!-- content input -->
+                          <textarea name="" id="trumbowyg" cols="30" rows="10" placeholder="Enter your text" required></textarea>
+      
+                          <!-- another info -->
+                          <div class="another-info row w-100 d-md-flex flex-wrap justify-content-between">
+                              <div class="price col-md-6 m-0 p-0">
+                                  <div class="" style="width: calc(100% - 65px);">
+                                      <input type="number" placeholder="Price" class="" min="0" required>
+                                  </div>
+                                  <span class="unit">
+                                      <select name="" id="">
+                                          <option value="vnd">vnd</option>
+                                          <option value="usd">usd</option>
+                                      </select>
+                                  </span>
+                              </div>
+                              <div class="vehical col-md-6 m-0 p-0">
+                                  <select name="" id="" required>
+                                      <option value="" disabled selected hidden>Select</option>
+                                      <option value="1">Xe máy</option>
+                                      <option value="2">Xe khách</option>
+                                      <option value="3">Ô tô</option>
+                                      <option value="4">Máy bay</option>
+                                      <option value="5">Đi bộ</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <!-- image input -->
+                          <div id="uploadImg" class="input-group flex-column align-items-center">
+                              <input type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()" multiple>
+                              <label for="file-input" class="custom-file-label btn rounded m-2">
+                                  <i class="fas fa-upload"></i> choose a photo</label>
+                              <p id="numOfFile"></p>
+                              <div id="images" class="row d-lg-flex flex-wrap mt-2 mb-2 align-items-center justify-content-around"></div>
+                          </div>
+                          <!-- submit btn -->
+                          <span class="w-100 d-flex justify-content-end">
+                              <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>
+                          </span>
+                      </form>
+                  </div>
+      
+                
+                  
+                  <!-- sidebar2 -->
+                  <!-- <div class="col-12 col-md-2 d-flex-column justify-content-center align-items-center border rounded d-none d-md-block">
+                      <form action="">
+                          <input type="number" name="" id="" placeholder="Price (vnd)">
+      
+                          <select class="custom-select" id="inputGroupSelect01">
+                              
+                              <option selected>Choose...</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                      </form>
+                  </div> -->
+              </div>
+      
+              <!-- footer -->
+              <footer class="py-3 my-0 mt-auto">
+                  <ul class="nav justify-content-center border-bottom pb-0 mb-0">
+                      <!-- <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li> -->
+                  </ul>
+                  <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+              </footer>
+        </div>
     </div>
+    
 </body>
 
 <!-- Import jQuery -->
@@ -100,4 +255,6 @@
 
 <!--bootstrap-->
 <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="./uploadImg.js"></script>
 </html>
