@@ -1,12 +1,37 @@
+body{
+    background-color: #f9fafb;
+}
+
+
+
+
+
+
+.p-title-input{
+    text-align: center;
+    border-radius: 6px;
+    border: 0.2px solid rgba(200,200,200,0.1);
+    outline: none;
+    margin: 8px 0px;
+    padding: 6px 0px;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.title{
+    width: 90%;
+}
+
 #images figure{
     display: flex;
     justify-content: center;
+    width: 100%;
     min-width: 216px;
 }
 #images img{
-    max-width: 500px;
+    /* max-width: 500px; */
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     object-fit: cover;
 }
 
@@ -25,13 +50,13 @@ p{
     align-self: center;
 }
 .price, .vehical select{
-    border: 0.5px solid rgba(100,100,100,0.2);
+    border: 0.2px solid rgba(200,200,200,0.1);
     padding: 8px;
-    height: 42px;
+    height: 50px;
     margin: 16px 0px;
     width: 49%;
-    border-radius: 4px;
-    
+    border-radius: 6px;
+    cursor: pointer;
 }
 .price{
     /* overflow: hidden; */
@@ -39,7 +64,7 @@ p{
 }
 .price input{
     width: 100%;
-    padding: 7px;
+    padding: 6px;
     border: none;
     outline: none;
     
@@ -54,7 +79,7 @@ p{
     height: 38px;
     border: none;
     outline: none;
-    
+    cursor: pointer;
 }
 
 .vehical{
@@ -130,4 +155,9 @@ option{
     .mini-size{
         display: none;
     }
+}
+
+
+.a-shadow:focus {
+    box-shadow: 0px 0px 8px rgba(200,150,150,0.5) !important;
 }
