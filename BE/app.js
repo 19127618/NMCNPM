@@ -7,7 +7,9 @@ const port = 3000;
 
 
 const app = express();
+const route = require('./routers');
 
+//log
 app.use(cmdLog('dev'));
 
 //template engine
@@ -18,9 +20,7 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'))
 
-app.get('/', (req, res) => {
-  res.render('write-blog');
-})
+route(app);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
