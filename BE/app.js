@@ -11,7 +11,7 @@ const app = express();
 app.use(cmdLog('dev'));
 
 //template engine
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'/public')));
 app.engine('hbs', exphbs({
   extname: '.hbs'
 }));
@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'))
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('write-blog');
 })
 
 app.listen(port, () => {
