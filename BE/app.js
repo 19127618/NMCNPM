@@ -1,15 +1,27 @@
 const express = require('express');
 const cmdLog = require('morgan');
 const exphbs  = require('express-handlebars');
+const path = require('path');
+const port = 3000;
+
+
+
 const app = express();
 
 app.use(cmdLog('dev'));
 
-app.engine('handlebars', exphbs());
-app.set('view engine', 'handlebars');
+//template engine
+app.use(express.static(path.join(__dirname,'public')));
+app.engine('hbs', exphbs({
+  extname: '.hbs'
+}));
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'))
 
-app.get('/', function (req, res) {
-    res.render('home');
-});
+app.get('/', (req, res) => {
+  res.render('home');
+})
 
-app.listen(3000);
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
