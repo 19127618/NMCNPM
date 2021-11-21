@@ -1,0 +1,37 @@
+:root {
+    --primary-color: rgb(255,255,255);
+    --text-color: #42405b;
+    --text-select-color: #1a73e8;
+    --hover-color: #f1f3f4;
+    --select-color: #e8f0fe;
+    --select-hover-color: #d2e3fc;
+
+    --navbar-height: 64px;
+    --border-radius: 5px;
+
+    --navbar-logo-width: 252px;
+    --navbar-option-width: 264px;
+    --navbar-search-width: calc(100% - var(--navbar-logo-width) - var(--navbar-option-width));
+}
+* {
+    box-sizing: inherit;
+}
+html {
+    /* font-size: 62.5%; */
+    line-height: 1.6em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.element-block--show {
+    display: block !important;
+    animation: fadeIn linear 0.2s;
+}
+.element-flex--show {
+    display: flex !important;
+    animation: fadeIn linear 0.2s;
+}
+.element-disable {
+    display: none;
+}
