@@ -1,0 +1,107 @@
+<div class="mcontainer">
+
+
+	<div class="lg:flex  lg:space-x-12">
+
+		<div class="lg:w-3/4">
+
+			<div class="flex justify-between items-center relative md:mb-4 mb-3">
+				<div class="flex-1">
+					<h2 class="text-2xl font-semibold"> Blog </h2>
+					<nav class="responsive-nav md:m-0 -mx-4 style-2">
+						<ul>
+							<li class="active"><a href="#" class="lg:px-2"> Bài viết mới nhất </a></li>
+							<li><a href="#" class="lg:px-2"> Theo dõi </a></li>
+							<li><a href="#" class="lg:px-2"> Xếp hạng cao </a></li>
+						</ul>
+					</nav>
+				</div>
+				<a href="#"
+				   class="flex items-center justify-center h-10 w-10 z-10 rounded-full bg-blue-600 text-white absolute right-0"
+				   data-tippy-placement="left" title="Create New Article">
+					<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+						 xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+							  d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+							  clip-rule="evenodd"></path>
+					</svg>
+				</a>
+			</div>
+
+			<div class="card divide-y divide-gray-100 px-4">
+				{{#each blogs}}
+				<div class="lg:flex lg:space-x-6 py-5">
+					<a href="blog-read.html">
+						<div class="lg:w-60 w-full h-40 overflow-hidden rounded-lg relative shadow-sm">
+							<img src="public/assets/images/blog/{{blog.id}}/{{blog.id}}.jpeg" alt=""
+								 class="w-full h-full absolute inset-0 object-cover">
+							<div class="absolute bg-blue-100 font-semibold px-2.5 py-1 rounded-full text-blue-500 text-xs top-2.5 left-2.5">
+								{{blog.type}}
+							</div>
+						</div>
+					</a>
+					<div class="flex-1 lg:pt-0 pt-4">
+							<a href="/blogs/{{this.id}}" class="text-xl font-semibold line-clamp-2"> {{this.title}}</a>
+							<p class="line-clamp-2 pt-3"> {{this.tinyDes}} </p>
+
+							<div class="flex items-center pt-3">
+								<div class="flex items-center">
+									<ion-icon name="thumbs-up-outline" class="text-xl mr-2"></ion-icon>
+									{{this.numOfLike}}
+								</div>
+								<div class="flex items-center mx-4">
+									<ion-icon name="chatbubble-ellipses-outline" class="text-xl mr-2"></ion-icon>
+									{{this.numOfComment}}
+								</div>
+								<div class="flex items-center">
+									<ion-icon name="bookmark-outline" class="text-xl mr-2"></ion-icon>
+									{{this.numOfSave}}
+								</div>
+							</div>
+
+
+
+					</div>
+				</div>
+				{{/each}}
+			</div>
+
+		</div>
+		<!-- Recently post , right panel-->
+		<div class="lg:w-1/4 w-full flex-shrink-0">
+
+			<div uk-sticky="offset:100" class="uk-sticky">
+
+<!--				<h2 class="text-lg font-semibold mb-3"> Hot ngày </h2>-->
+<!--				<ul>-->
+<!--					<li>-->
+<!--						<a href="blog-read.html" class="hover:bg-gray-100 rounded-md p-2 -mx-2 block">-->
+<!--							<h3 class="font-medium line-clamp-2"> Awesome Web Dev Tools and Resources For-->
+<!--								2021 </h3>-->
+<!--							<div class="flex items-center my-auto text-xs space-x-1.5">-->
+<!--								<div> Sep 12, 2020</div>-->
+<!--								<div class="pb-1"> .</div>-->
+<!--								<ion-icon name="chatbox-ellipses-outline"></ion-icon>-->
+<!--								<div> 23</div>-->
+<!--							</div>-->
+<!--						</a>-->
+<!--					</li>-->
+<!--				</ul>-->
+				<br>
+<!--				popular tag-->
+				<h4 class="text-lg font-semibold mb-3"> Tags </h4>
+				<div class="flex flex-wrap gap-2">
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Đà Lạt</a>
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Phượt</a>
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Quán ngon</a>
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Mẹo</a>
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Tâm sự</a>
+					<a href="#" class="bg-gray-100 py-1.5 px-4 rounded-full"> Gia Lai</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>

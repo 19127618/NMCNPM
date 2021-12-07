@@ -6856,7 +6856,7 @@ header .header_inner .right_side {
   outline: 0;
   background: #f0f2f5;
   border: 1px solid transparent;
-  border-radius: 2rem;
+  border-radius: 1rem;
   min-width: 550px;
   font-size: 15px;
 }
