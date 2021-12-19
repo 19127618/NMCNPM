@@ -4,7 +4,7 @@ import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
 
-import {db} from './middlewares/connect_db.js';
+import db from './middlewares/connect_db.js';
 db.connect();
 
 // import {tmp, c} from './test.js'
