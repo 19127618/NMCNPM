@@ -3,7 +3,11 @@ import {engine} from "express-handlebars";
 import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
-import {tmp, c} from './test.js'
+
+import {db} from './middlewares/connect_db.js';
+db.connect();
+
+// import {tmp, c} from './test.js'
 
 // const express = require('express')
 const app = express();
