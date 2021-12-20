@@ -4,7 +4,7 @@ const slug = require('mongoose-slug-generator');
 const Schema = mongoose.Schema;
 
 const Blog_Place = new Schema({
-    id_blog: { type : String , required: true },
+    blog_id: { type : String , required: true },
     price: { type : Number },
     image: { type : Array },
     header: {type: String},
