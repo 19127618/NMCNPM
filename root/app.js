@@ -4,6 +4,8 @@ import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
 
+import accountsModel from './models/accounts.model.js';
+
 import db from './middlewares/connect_db.js';
 db.connect();
 
@@ -22,6 +24,11 @@ app.use('/public', express.static('public'));
 app.engine('hbs', engine({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 app.set("views", "./views");
+
+
+app.get('/db', function (req, res) {
+    console.log(accountsModel)
+})
 
 app.get('/', function (req, res) {
     res.render('home', {})

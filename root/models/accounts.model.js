@@ -1,7 +1,10 @@
-const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
+// const mongoose = require('mongoose');
+// const uniqueValidator = require('mongoose-unique-validator');
+import mongoose from 'mongoose';
+import uniqueValidator from'mongoose-unique-validator';
 
-const Schema = mongoose.Schema
+const {Schema} = mongoose;
+
 
 const Account = new Schema({
     email: { type : String , required: true , unique: true},
@@ -15,16 +18,19 @@ const Account = new Schema({
     coverImg: {type: String},
     followers: {type: [String]},
     following: {type: [String]},
-    saved: {type: [string]},
+    saved: {type: [String]},
     report: {
         id_reporter: {type: String},
         reason: {type: String},
     },
     bio: {
-        type: string
+        type: String
     }
 });
-
 Account.plugin(uniqueValidator);
 
-module.exports = mongoose.model('Accounts', Account);
+export default{
+    Account
+}
+
+// module.exports = mongoose.model('Accounts', Account);

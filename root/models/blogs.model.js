@@ -1,7 +1,9 @@
-const mongoose = require('mongoose');
-const slug = require('mongoose-slug-generator');
+// const mongoose = require('mongoose');
+// const slug = require('mongoose-slug-generator');
+import mongoose from 'mongoose';
+import slug from 'mongoose-slug-generator';
 
-const Schema = mongoose.Schema;
+const {Schema} = mongoose.Schema;
 
 const Blog_Place = new Schema({
     blog_id: { type : String , required: true },
@@ -36,4 +38,8 @@ const Blog_Place = new Schema({
 mongoose.plugin(slug);
 
 //collection name, with SINGULAR NOUN and name on the database will be the PLURAL NOUN
-module.exports = mongoose.model('Blogs', Blog);
+// module.exports = mongoose.model('Blogs', Blog);
+
+export default{
+    Blog_Place
+}
