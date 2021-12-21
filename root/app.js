@@ -4,14 +4,10 @@ import {fileURLToPath} from "url";
 import morgan from "morgan";
 
 // temp--------------------------------------------------------------------
-// import accountsModel from './models/accounts.model.js';
-// import mongooseObject from './ulti/mongoose.js';
-import bodyParser from "body-parser";
-import writeBlog from './middlewares/writeBlogController.js';
-// create application/json parser
-var jsonParser = bodyParser.json()
 
-// create application/x-www-form-urlencoded parser
+import bodyParser from "body-parser";
+import writeBlog from './controller/writeBlogController.js';
+var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // temp--------------------------------------------------------------------
 
@@ -39,9 +35,6 @@ activate_view_middleware(app);
 activate_route_middleware(app);
 
 // temp--------------------------------------------------------------------
-// app.get('/db', function (req, res) {
-//     res.render('write_blog',{})
-// })
 app.post('/write',urlencodedParser, writeBlog.index);
 // temp--------------------------------------------------------------------
 

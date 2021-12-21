@@ -7,6 +7,7 @@ const {Schema} = mongoose;
 
 
 const account = new Schema({
+    id_user: {type: String, required: true},
     email: { type : String , required: true , unique: true},
     password: { type : String , required: true},
     phone: { type : String },

@@ -1,12 +1,14 @@
 import express from "express";
 import blogsModel from "../models/blogs.model.js";
+import { v4 as uuidv4 } from 'uuid';
 
 class writeBlog{
     index(req, res){
         
         blogsModel.create({
-        title: req.body.title,
-        content: req.body.content,
+            blog_id: uuidv4(),
+            title: req.body.title,
+            content: req.body.content,
     })
     .then(result => {
         console.log(result)

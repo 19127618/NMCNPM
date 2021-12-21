@@ -31,7 +31,7 @@ const Blog_Place = new Schema({
     sharers: { type: [String]},
 
     
-    slug: { type: String, slug: 'title', unique: true},
+    slug: { type: String, slug: 'blog_id', unique: true},
 },{timestamps: true});
 
 // Add plugin
