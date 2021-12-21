@@ -1,10 +1,11 @@
 import express from 'express'
-import {engine} from "express-handlebars";
 import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
 
 import accountsModel from './models/accounts.model.js';
+import activate_view_middleware from './middlewares/view.mdw.js';
+import activate_route_middleware from './middlewares/routes.mdw.js';
 
 import db from './middlewares/connect_db.js';
 db.connect();
@@ -13,29 +14,23 @@ db.connect();
 
 // const express = require('express')
 const app = express();
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 app.use(morgan('dev'));
 app.use(express.urlencoded({
     extended: true
 }));
-
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use('/public', express.static('public'));
-app.engine('hbs', engine({extname: '.hbs'}));
-app.set('view engine', 'hbs');
-app.set("views", "./views");
 
+activate_view_middleware(app);
+activate_route_middleware(app);
 
-app.get('/db', function (req, res) {
-    console.log(accountsModel)
-})
-
-app.get('/', function (req, res) {
-    res.render('home', {})
-})
+// app.get('/db', function (req, res) {
+//     console.log(accountsModel)
+// })
 
 const port = 3000;
 app.listen(port, function () {
-    console.log('Start listenning....')
+    console.log(`Start listening at http://localhost:${port}`);
 })
 

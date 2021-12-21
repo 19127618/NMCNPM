@@ -1,0 +1,486 @@
+{{#section 'css'}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+{{/section}}
+<!-- Main Contents -->
+<div class="mcontainer">
+
+    <!-- Profile cover -->
+    <div class="profile user-profile">
+
+        <div class="profiles_banner">
+            <img src="public/assets/images/avatars/profile-cover.jpg" alt="">
+            <div class="profile_action absolute bottom-0 right-0 space-x-1.5 p-3 text-sm z-50 hidden lg:flex">
+                <a href="#" class="flex items-center justify-center h-8 px-3 rounded-md bg-gray-700 bg-opacity-70 text-white space-x-1.5">
+                    <ion-icon name="create-outline" class="text-xl"></ion-icon>
+                    <span> Thay đổi ảnh bìa </span>
+                </a>
+            </div>
+        </div>
+        <div class="profiles_content">
+
+            <div class="profile_avatar">
+                <div class="profile_avatar_holder">
+                    <img src="public/assets/images/avatars/avatar-8.jpg" alt="">
+                    <div class="profile_action absolute bottom-0 right-0 space-x-1.5 p-3 text-sm z-50 hidden lg:flex">
+                        <a href="#" class="flex items-center justify-center h-8 px-3 rounded-md bg-gray-700 bg-opacity-70 text-white space-x-1.5">
+                            <ion-icon name="create-outline" class="text-xl"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="user_status status_online"></div>
+                <div class="icon_change_photo" hidden> <ion-icon name="camera" class="text-xl"></ion-icon> </div>
+            </div>
+
+            <div class="profile_info text-center">
+                <h1> Admin </h1>
+                <p> Thích kẹo dừa, thích tắm, ghét wibu :v <a class="text-blue-400" href="#"> Edit </a></p>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between lg:border-t border-gray-100 flex-col-reverse lg:flex-row pt-2">
+            <nav class="responsive-nav pl-3">
+                <ul  uk-switcher="connect: #timeline-tab; animation: uk-animation-fade">
+                    <li><a href="#">Dòng thời gian</a></li>
+                    <li><a href="#">Người theo dõi <span>3,243</span> </a></li>
+                    <li><a href="#">Theo dõi <span>3</span> </a></li>
+                    <li><a href="#">Lịch trình </a></li>
+                </ul>
+            </nav>
+
+            <!-- button actions -->
+            <div class="flex items-center space-x-1.5 flex-shrink-0 pr-4 mb-2 justify-center order-1 relative">
+
+                <!-- add post -->
+                <a href="#" class="flex items-center justify-center h-10 px-5 rounded-md bg-blue-600 text-white space-x-1.5 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span> Tạo bài viết mới</span>
+                </a>
+
+                <!-- more icon -->
+                <a href="#" class="flex items-center justify-center h-10 w-10 rounded-md bg-gray-100">
+                    <ion-icon name="ellipsis-horizontal" class="text-xl"></ion-icon>
+                </a>
+                <!-- more drowpdown -->
+                <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
+                     uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-bottom-small; offset:5">
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                <ion-icon name="create-outline" class="pr-2 text-xl"></ion-icon>  Thay đổi thông tin
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="-mx-2 my-2 dark:border-gray-800">
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-50 hover:text-red-500 rounded-md dark:hover:bg-red-600">
+                                <ion-icon name="stop-circle-outline" class="pr-2 text-xl"></ion-icon>  Huỷ theo dõi
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="uk-switcher lg:mt-8 mt-4" id="timeline-tab">
+
+        <!-- Timeline -->
+        <div class="md:flex md:space-x-6 lg:mx-16">
+            <div class="space-y-5 flex-shrink-0 md:w-7/12">
+                <!-- post -->
+                <div class="card lg:mx-0 uk-animation-slide-bottom-small">
+
+                    <!-- post header-->
+                    <div class="flex justify-between items-center lg:p-4 p-2.5">
+                        <div class="flex flex-1 items-center space-x-4">
+                            <a href="#">
+                                <img src="public/assets/images/avatars/avatar-2.jpg" class="bg-gray-200 border border-white rounded-full w-10 h-10">
+                            </a>
+                            <div class="flex-1 font-semibold capitalize">
+                                <a href="#" class="text-black dark:text-gray-100"> Admin</a>
+                                <div class="text-gray-700 flex items-center space-x-2"> 5 <span> hrs </span> <ion-icon name="people"></ion-icon></div>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#"> <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 dark:hover:bg-gray-700"></i> </a>
+                            <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700"
+                                 uk-drop="mode: click;pos: bottom-right;animation: uk-animation-slide-bottom-small">
+
+                                <ul class="space-y-1">
+                                    <li>
+                                        <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <i class="uil-edit-alt mr-1"></i>  Chỉnh sửa bài viết
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <i class="uil-comment-slash mr-1"></i>   Khoá bình luận
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md dark:hover:bg-gray-800">
+                                            <i class="uil-favorite mr-1"></i>  Thêm vào danh sách yêu thích
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <hr class="-mx-2 my-2 dark:border-gray-800">
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md dark:hover:bg-red-600">
+                                            <i class="uil-trash-alt mr-1"></i>  Xoá bài viết
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 space-y-3">
+                        <a href="blog-read.html">
+                            <div class="w-full h-40 overflow-hidden rounded-lg relative shadow-sm">
+                                <img src="public/assets/images/blog/img-4.jpg" alt=""
+                                     class="w-full h-full absolute inset-0 object-cover">
+                                <div class="absolute bg-blue-100 font-semibold px-2.5 py-1 rounded-full text-blue-500 text-xs top-2.5 left-2.5">
+                                    JavaScript
+                                </div>
+                            </div>
+                        </a>
+                        <div class="flex-1 lg:pt-0 pt-4">
+
+                            <a href="blog-read.html" class="text-xl font-semibold line-clamp-2"> Interesting
+                                JavaScript and CSS Libraries in 2021 you should be know</a>
+                            <p class="line-clamp-2 pt-3"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+                                volutpat </p>
+
+                            <div class="flex items-center pt-3">
+                                <div class="flex items-center">
+                                    <ion-icon name="thumbs-up-outline" class="text-xl mr-2"></ion-icon>
+                                    12
+                                </div>
+                                <div class="flex items-center mx-4">
+                                    <ion-icon name="chatbubble-ellipses-outline" class="text-xl mr-2"></ion-icon>
+                                    12
+                                </div>
+                                <div class="flex items-center">
+                                    <ion-icon name="bookmark-outline" class="text-xl mr-2"></ion-icon>
+                                    12
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="flex justify-center mt-6">
+                    <a href="#" class="bg-white font-semibold my-3 px-6 py-2 rounded-full shadow-md dark:bg-gray-800 dark:text-white">
+                        Xem thêm ..</a>
+                </div>
+
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="w-full space-y-6">
+
+                <div class="widget card p-5">
+                    <h4 class="text-lg font-semibold"> Thông tin </h4>
+                    <ul class="text-gray-600 space-y-3 mt-3">
+                        <li class="flex items-center space-x-2">
+                            <ion-icon name="home-sharp" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
+                            Sống tại <strong> Việt Nam , Trái Đất  </strong>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <ion-icon name="globe" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
+                            đến từ <strong> HCMUS  </strong>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <ion-icon name="logo-rss" class="rounded-full bg-gray-200 text-xl p-1 mr-3"></ion-icon>
+                            Có <strong> 3,240 người</strong>&nbsp;theo dõi
+                        </li>
+                    </ul>
+                    <div class="gap-3 grid grid-cols-3 mt-4">
+                        <img src="public/assets/images/avatars/avatar-lg-2.jpg" alt="" class="object-cover rounded-lg col-span-full">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" alt="" class="rounded-lg">
+                        <img src="public/assets/images/avatars/avatar-4.jpg" alt="" class="rounded-lg">
+                        <img src="public/assets/images/avatars/avatar-5.jpg" alt="" class="rounded-lg">
+                    </div>
+                    <a href="#" class="button gray mt-3 w-full"> Chỉnh sửa </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- follower  -->
+        <div class="profile user-profile md:p-6 p-2 mx-auto">
+
+            <div class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-x-2 gap-y-4 mt-3">
+
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-4.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  Martin Gray  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-7.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  Alex Michael </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-5.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Jesse Stevens  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-6.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Erica Jones  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <a href="#" class="bg-white font-semibold my-3 px-6 py-2 rounded-full shadow-md dark:bg-gray-800 dark:text-white">
+                    Xem thêm ..</a>
+            </div>
+
+        </div>
+
+        <!-- Following  -->
+        <div class="profile user-profile md:p-6 p-2 mx-auto">
+
+            <div class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-x-2 gap-y-4 mt-3">
+
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-4.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  Martin Gray  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-7.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  Alex Michael </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-5.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Jesse Stevens  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-6.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Erica Jones  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <a href="#" class="bg-white font-semibold my-3 px-6 py-2 rounded-full shadow-md dark:bg-gray-800 dark:text-white">
+                    Xem thêm ..</a>
+            </div>
+
+        </div>
+
+        <!-- Pages  -->
+        <div class="profile user-profile md:p-6 p-2 mx-auto">
+
+            <div class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-x-2 gap-y-4 mt-3">
+
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-2.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5">  James Lewis </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <a href="timeline.html">
+                        <img src="public/assets/images/avatars/avatar-3.jpg" class="h-36 object-cover rounded-md shadow-sm w-full">
+                    </a>
+                    <div class="pt-3 px-1">
+                        <a href="timeline.html" class="text-base font-semibold mb-0.5"> Monroe Parker  </a>
+                        <p class="font-medium text-sm">843K Theo dõi </p>
+                        <button class="bg-blue-100 w-full flex font-semibold h-8 items-center justify-center mt-3 px-3 rounded-md text-blue-600 text-sm mb-1">
+                            Theo dõi
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <a href="#" class="bg-white font-semibold my-3 px-6 py-2 rounded-full shadow-md dark:bg-gray-800 dark:text-white">
+                    Xem thêm ..</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
