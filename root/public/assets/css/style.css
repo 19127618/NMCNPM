@@ -338,7 +338,6 @@ textarea.with-border:focus {
 
 input[type="submit"] {
   border: none;
-  padding: 11px 18px;
   width: auto;
 }
 
