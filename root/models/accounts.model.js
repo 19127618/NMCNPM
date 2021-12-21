@@ -6,7 +6,7 @@ import uniqueValidator from'mongoose-unique-validator';
 const {Schema} = mongoose;
 
 
-const Account = new Schema({
+const account = new Schema({
     email: { type : String , required: true , unique: true},
     password: { type : String , required: true},
     phone: { type : String },
@@ -27,10 +27,11 @@ const Account = new Schema({
         type: String
     }
 });
-Account.plugin(uniqueValidator);
+account.plugin(uniqueValidator);
 
-export default{
-    Account
-}
+// export default{
+//     Account
+// }
 
 // module.exports = mongoose.model('Accounts', Account);
+export default mongoose.model('accounts', account);
