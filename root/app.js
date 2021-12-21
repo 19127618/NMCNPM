@@ -39,9 +39,9 @@ activate_view_middleware(app);
 activate_route_middleware(app);
 
 // temp--------------------------------------------------------------------
-app.get('/db', function (req, res) {
-    res.render('write_blog',{})
-})
+// app.get('/db', function (req, res) {
+//     res.render('write_blog',{})
+// })
 app.post('/write',urlencodedParser, writeBlog.index);
 // temp--------------------------------------------------------------------
 
