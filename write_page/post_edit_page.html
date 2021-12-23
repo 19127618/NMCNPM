@@ -563,67 +563,70 @@
             </div> 
             <!-- <div class="col-md-2 d-none d-md-block"></div> -->
 
-            <div class="main-container col-md-10 mt-16">
-                <!-- editor -->
-                <div class="col-md-12 mt-4 mb-8">
-                    <form action="" class="form-group flex-md-column d-flex flex-wrap justify-content-center align-items-center" method="" style="min-height: 78vh;">
-                        <!-- post title -->
-                        <div class="title row d-md-flex align-items-center justify-content-center">
-                            
-                            <textarea placeholder="Post title" class="p-title-input col-md-4 shadow-sm a-shadow" required></textarea>
-                        </div>
-                        <!-- content input -->
-                        <textarea name="" id="trumbowyg" cols="30" rows="10" placeholder="Enter your text" required></textarea>
-    
-                        <!-- another info -->
-                        <div class="another-info row w-100 d-md-flex flex-wrap justify-content-between">
-                            <div class="price col-md-6 m-0 p-0 shadow-sm">
-                                <div class="" style="width: calc(100% - 65px);">
-                                    <input type="number" placeholder="Price" class="" min="0" required>
+            <div class="main-container">
+                <div class="col-md-10 mt-16">
+                    <!-- editor -->
+                    <div class="col-md-12 mt-4 mb-8">
+                        <form action="" class="form-group flex-md-column d-flex flex-wrap justify-content-center align-items-center" method="" style="min-height: 78vh;">
+                            <!-- post title -->
+                            <div class="title row d-md-flex align-items-center justify-content-center">
+                                
+                                <textarea placeholder="Post title" class="p-title-input col-md-4 shadow-sm a-shadow" required></textarea>
+                            </div>
+                            <!-- content input -->
+                            <textarea name="" id="trumbowyg" cols="30" rows="10" placeholder="Enter your text" required></textarea>
+
+                            <!-- another info -->
+                            <div class="another-info row w-100 d-md-flex flex-wrap justify-content-between">
+                                <div class="price col-md-6 m-0 p-0 shadow-sm">
+                                    <div class="" style="width: calc(100% - 65px);">
+                                        <input type="number" placeholder="Price" class="" min="0" required>
+                                    </div>
+                                    <span class="unit">
+                                        <select name="" id="" style="height: 46px;">
+                                            <option value="vnd">VND</option>
+                                            <option value="usd">USD</option>
+                                        </select>
+                                    </span>
                                 </div>
-                                <span class="unit">
-                                    <select name="" id="" style="height: 46px;">
-                                        <option value="vnd">VND</option>
-                                        <option value="usd">USD</option>
+                                <div class="vehical col-md-6 m-0 p-0">
+                                    <select name="" id="" required class="shadow-sm">
+                                        <option value="" disabled selected hidden>Select</option>
+                                        <option value="1">Xe máy</option>
+                                        <option value="2">Xe khách</option>
+                                        <option value="3">Ô tô</option>
+                                        <option value="4">Máy bay</option>
+                                        <option value="5">Đi bộ</option>
                                     </select>
-                                </span>
+                                </div>
                             </div>
-                            <div class="vehical col-md-6 m-0 p-0">
-                                <select name="" id="" required class="shadow-sm">
-                                    <option value="" disabled selected hidden>Select</option>
-                                    <option value="1">Xe máy</option>
-                                    <option value="2">Xe khách</option>
-                                    <option value="3">Ô tô</option>
-                                    <option value="4">Máy bay</option>
-                                    <option value="5">Đi bộ</option>
-                                </select>
+                            <!-- image input -->
+                            <div id="uploadImg" class="input-group flex-column align-items-center">
+                                <input type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()">
+                                <label for="file-input" class="custom-file-label btn rounded m-2">
+                                    <i class="fas fa-upload"></i> Choose a cover image</label>
+                                <p id="numOfFile"></p>
+                                <div id="images" class="row w-100 d-lg-flex mt-2 mb-2 align-items-center justify-content-around"></div>
                             </div>
-                        </div>
-                        <!-- image input -->
-                        <div id="uploadImg" class="input-group flex-column align-items-center">
-                            <input type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()">
-                            <label for="file-input" class="custom-file-label btn rounded m-2">
-                                <i class="fas fa-upload"></i> Choose a cover image</label>
-                            <p id="numOfFile"></p>
-                            <div id="images" class="row w-100 d-lg-flex mt-2 mb-2 align-items-center justify-content-around"></div>
-                        </div>
-                        <!-- submit btn -->
-                        <span class="w-100 d-flex justify-content-end">
-                            <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>
-                        </span>
-                    </form>
-                </div>    
-                <!-- footer -->
-                <!-- <footer class="py-3 my-0">
-                    <ul class="nav justify-content-center border-bottom pb-0 mb-0 mt-3">
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-                    </ul>
-                    <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
-                </footer> -->
+                            <!-- submit btn -->
+                            <span class="w-100 d-flex justify-content-end">
+                                <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>
+                            </span>
+                        </form>
+                    </div>    
+                    <!-- footer -->
+                    <!-- <footer class="py-3 my-0">
+                        <ul class="nav justify-content-center border-bottom pb-0 mb-0 mt-3">
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                        </ul>
+                        <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+                    </footer> -->
+                </div>
+                
             </div>
     </div>
     

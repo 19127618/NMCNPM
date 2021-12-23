@@ -14,7 +14,7 @@ router.get('/forum', function (req, res){
 });
 
 router.get('/write', function (req, res){
-    res.render('vwBlog/write_blog');
+    res.render('vwBlog/write-blog');
 });
 
 export default router;

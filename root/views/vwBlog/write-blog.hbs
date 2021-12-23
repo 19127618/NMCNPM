@@ -1,0 +1,64 @@
+{{#section 'css'}}
+    <link rel="stylesheet" href="/public/assets/css/uploadImg.css">
+{{/section}}
+<div class="main-container col-md-10 mt-16">
+    <!-- editor -->
+    <div class="col-md-12 mt-4 mb-8">
+        <form action="" class="form-group flex-md-column d-flex flex-wrap" method="">
+            <!-- post title -->
+            <div class="title row d-md-flex align-items-center justify-content-center">
+
+                <input type="text" placeholder="Post title" class="p-title-input col-md-4 shadow-sm a-shadow" required></input>
+            </div>
+            <!-- content input -->
+            <form method="post">
+                <textarea id="mytextarea"></textarea>
+            </form>
+
+            <!-- another info -->
+            <div class="another-info row w-100 d-md-flex flex-wrap justify-content-between">
+                <div class="price col-md-6 m-0 p-0 shadow-sm">
+                    <div class="" style="width: calc(100% - 65px);">
+                        <input type="number" placeholder="Price" class="" min="0" required>
+                    </div>
+                    <span class="unit">
+                        <select name="" id="" style="height: 46px;">
+                            <option value="vnd">VND</option>
+                            <option value="usd">USD</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="vehical col-md-6 m-0 p-0">
+                    <select name="" id="" required class="shadow-sm">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="1">Xe máy</option>
+                        <option value="2">Xe khách</option>
+                        <option value="3">Ô tô</option>
+                        <option value="4">Máy bay</option>
+                        <option value="5">Đi bộ</option>
+                    </select>
+                </div>
+            </div>
+            <!-- image input -->
+            <div id="uploadImg" class="input-group flex-column align-items-center">
+                <input type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()">
+                <label for="file-input" class="custom-file-label btn rounded m-2">
+                    <i class="fas fa-upload"></i> Choose a cover image</label>
+                <p id="numOfFile"></p>
+                <div id="images" class="row w-100 d-lg-flex mt-2 mb-2 align-items-center justify-content-around"></div>
+            </div>
+            <!-- submit btn -->
+            <span class="w-100 d-flex justify-content-end">
+                <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>
+            </span>
+        </form>
+    </div>
+</div>
+
+{{#section 'js'}}
+
+    <!--bootstrap-->
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/public/assets/js/uploadImg.js"></script>
+{{/section}}

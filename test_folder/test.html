@@ -5,20 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <script src="https://cdn.tiny.cloud/1/zl91lwryeczyn2jhzji60m8ccauunch925epicw56btc5pa2/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
   <link rel="stylesheet" href="./uploadImg.css">
   <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body>
-  <div id="container" class="input-group">
-    <input type="file" id="file-input" accept="image/jpeg. image.png" 
-    onchange="preview()" multiple>
-    <label for="file-input" class="custom-file-label">
-      <i class="fas fa-upload"></i>
-      choose a photo
-    </label>
-    <p id="numOfFile"></p>
-    <div id="images" class="row d-lg-flex flex-wrap mt-2 mb-2 align-items-center"></div>
+  <form method="post">
+    <textarea id="mytextarea"></textarea>
+  </form>
+
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+    });
+  </script>
 </body>
 <script src="./uploadimg.js"></script>
 </html>
