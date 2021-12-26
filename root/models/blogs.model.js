@@ -8,6 +8,7 @@ const {Schema} = mongoose;
 const Blog_Place = new Schema({
     blog_id: { type : String },
     price: { type : Number },
+    priceUnit: { type: String},
     image: { type : Array },
     title: {type: String},
     content: {type: String},

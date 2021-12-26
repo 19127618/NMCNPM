@@ -2,13 +2,12 @@ import express from 'express'
 import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
+import {upload, uploadImg} from './controller/uploadImgController.js';
+
 
 // temp--------------------------------------------------------------------
 
-import bodyParser from "body-parser";
-import writeBlog from './controller/writeBlogController.js';
-var jsonParser = bodyParser.json()
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 // temp--------------------------------------------------------------------
 
 import accountsModel from './models/accounts.model.js';
@@ -35,7 +34,6 @@ activate_view_middleware(app);
 activate_route_middleware(app);
 
 // temp--------------------------------------------------------------------
-app.post('/write',urlencodedParser, writeBlog.index);
 // temp--------------------------------------------------------------------
 
 const port = 3000;
