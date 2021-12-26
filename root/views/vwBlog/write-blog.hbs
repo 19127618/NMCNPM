@@ -4,7 +4,7 @@
 <div class="main-container">
     <!-- editor -->
     <div class="col-md-12 mt-4 mb-5">
-        <form action="/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center" method="post">
+        <form action="/blog/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center" method="post">
             <!-- post title -->
             <div class="title d-md-flex align-items-center justify-content-center">
 
@@ -59,9 +59,9 @@
 </div>
 
 {{#section 'js'}}
-
     <!--bootstrap-->
     <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.2/plugins/image/plugin.min.js" integrity="sha512-u7KhbXWnzixnSEh14OekZETi44aE5rCpWcZiuhwLOC76Q4s+BhMxb4tUbv/+Y9zUq/C9sdmePd0tvnI5PB0mzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.2/tinymce.min.js" integrity="sha512-MbhLUiUv8Qel+cWFyUG0fMC8/g9r+GULWRZ0axljv3hJhU6/0B3NoL6xvnJPTYZzNqCQU3+TzRVxhkE531CLKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/public/assets/js/uploadImg.js"></script>
 {{/section}}

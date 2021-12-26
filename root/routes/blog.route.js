@@ -2,7 +2,6 @@ import express from "express";
 import detailBlog from '../controller/detailBlogController.js';
 import bodyParser from "body-parser";
 import writeBlog from '../controller/writeBlogController.js';
-import { upload, uploadImg } from "../controller/uploadImgController.js";
 
 const router = express.Router();
 const jsonParser = bodyParser.json()
@@ -22,6 +21,7 @@ router.get('/write', function (req, res, next){
 });
 
 router.post('/write',urlencodedParser, writeBlog.index);
+
 
 
 
