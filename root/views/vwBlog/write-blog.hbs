@@ -3,23 +3,44 @@
 {{/section}}
 <div class="main-container">
     <!-- editor -->
-    <div class="col-md-12 mt-4 mb-5">
+    <div class="mt-4 mb-5">
         <form action="/blog/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center" method="post">
-            <!-- post title -->
-            <div class="title d-md-flex align-items-center justify-content-center">
+        
+            <div class="d-md-flex flex-col align-items-center">
+                <!-- post title -->
+                <div class="title d-md-flex align-items-center" style="width: 90%;">
+                    <input id="title" name="title" type="text" placeholder="Post title" class="p-title-input shadow-sm a-shadow" required></input>
+                </div>
 
-                <input id="title" name="title" type="text" placeholder="Post title" class="p-title-input shadow-sm a-shadow" required></input>
+                <!-- content input -->
+                <div class="d-lg-block m-2" style="width: 90%;">
+                    <textarea id="content" name="content" style="min-height: 380px;"></textarea>
+                </div>
             </div>
-            <!-- content input -->
-            <div class="d-lg-block m-2">
-                <textarea id="content" name="content" style="min-height: 380px;"></textarea>
+
+            {{!-- address, place or blog --}}
+            <div class="another-info d-md-flex flex-col flex-wrap justify-content-between w-75 m-0 mt-2">
+                <div class="mt-2 mb-2 p-0 shadow-sm w-100">
+                    <div class="">
+                        <input name="address" id="address" type="text" placeholder="Address" class="text-center">
+                    </div>
+                </div>
+                <div class="m-0 p-0 w-100">
+                    <select name="type" id="type" required class="shadow-sm text-center">
+                        <option value="" disabled selected hidden>Type</option>
+                        <option value="Blog">Blog</option>
+                        <option value="Place">Place</option>
+                
+                    </select>
+                </div>
+                
             </div>
 
             <!-- another info -->
-            <div class="another-info row d-md-flex flex-wrap justify-content-between w-75">
-                <div class="price col-md-6 m-0 p-0 shadow-sm">
+            <div class="another-info d-md-flex justify-content-between w-75">
+                <div class="price m-0 p-0 shadow-sm">
                     <div class="" style="width: calc(100% - 65px);">
-                        <input name="price" id="price" type="number" placeholder="Price" class="" min="0" required>
+                        <input name="price" id="price" type="number" placeholder="Price" class="text-center" min="0" required>
                     </div>
                     <span class="unit">
                         <select name="priceUnit" id="priceUnit" style="height: 50px;">
@@ -28,8 +49,8 @@
                         </select>
                     </span>
                 </div>
-                <div class="vehical col-md-6 m-0 p-0">
-                    <select name="vehicle" id="vehicle" required class="shadow-sm">
+                <div class="vehical m-0 p-0">
+                    <select name="vehicle" id="vehicle" vehicle class="shadow-sm text-center">
                         <option value="" disabled selected hidden>Select</option>
                         <option value="Đi bộ">Đi bộ</option>
                         <option value="Xe đạp">Xe đạp</option>
@@ -41,15 +62,16 @@
                         <option value="Máy bay">Máy bay</option>
                     </select>
                 </div>
-                <div id="uploadImg" class="input-group flex-column align-items-center">
-                    <input name="image" type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()">
-                    <label for="file-input" class="custom-file-label btn btn-info rounded m-2">
-                        <i class="fas fa-upload"></i> Choose a cover image</label>
-                    <p id="numOfFile"></p>
-                    <div id="images" class="row w-100 d-lg-flex mt-2 mb-2 align-items-center justify-content-around"></div>
-                </div>
+                
             </div>
             <!-- image input -->
+            <div id="uploadImg" class="input-group flex-column align-items-center">
+                <input name="image" type="file" id="file-input" accept="image/jpeg. image.png" onchange="preview()">
+                <label for="file-input" class="custom-file-label btn btn-info rounded m-2">
+                    <i class="fas fa-upload"></i> Choose a cover image</label>
+                <p id="numOfFile"></p>
+                <div id="images" class="row w-100 d-lg-flex mt-2 mb-2 align-items-center justify-content-around"></div>
+            </div>
             <!-- submit btn -->
             <span class="w-100 d-flex justify-content-end">
                 <button type="submit" name="Post" class="btn btn-primary col-12 col-md-2">Post</button>

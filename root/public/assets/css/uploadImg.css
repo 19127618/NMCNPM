@@ -8,9 +8,9 @@ body{
     border: 0.2px solid rgba(200,200,200,0.1);
     outline: none;
     margin: 8px 0px;
-    padding: 6px 0px;
-    font-weight: 600;
-    font-size: 1.8rem;
+    padding: 12px 0px;
+    font-weight: 600 !important;
+    font-size: 1.8rem !important;
 }
 
 .title{
@@ -50,12 +50,12 @@ p{
     padding: 8px;
     height: 50px;
     margin: 16px 0px;
-    width: 45%;
     border-radius: 6px;
     cursor: pointer;
 }
 .price{
     /* overflow: hidden; */
+    width: 48%;
     position: relative;
 }
 .price input{
@@ -82,12 +82,11 @@ p{
 .vehical{
     display: flex;
     justify-content: end;
-    width: 49%;
+    width: 48%;
 }
 .vehical select{
-    width: 100%;
+    /* width: 100%; */
     outline: none;
-
 }
 option{
     border: 1px solid red;
@@ -119,39 +118,11 @@ option{
 }
 
 
-
-/*@media (min-width: 760px) and (max-width: 1000px) {*/
-/*    .full-size .icon{*/
-/*        !* margin-right: 8px; *!*/
-/*        display: block;*/
-/*        padding-bottom: 8px;*/
-/*        text-align: center;*/
-/*        */
-/*    }*/
-/*    .sidebar-link{*/
-/*        display: flex;*/
-/*        flex-direction: column;*/
-/*        padding: 12px !important;*/
-/*    }*/
-/*}*/
-
-
-
-/*@media (max-width: 760px) {*/
-/*    .full-size{*/
-/*        display: none;*/
-/*    }*/
-/*    .sidebar{*/
-/*        width: 100px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 761px) {*/
-/*    .mini-size{*/
-/*        display: none;*/
-/*    }*/
-/*}*/
-
-
 .a-shadow:focus {
     box-shadow: 0px 0px 8px rgba(200,150,150,0.5) !important;
+}
+
+.text-center {
+    text-align: center;
+
 }

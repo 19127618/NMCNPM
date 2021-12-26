@@ -13,6 +13,8 @@ class writeBlog{
             priceUnit: req.body.priceUnit,
             // image: link,
             vehicle: req.body.vehicle,
+            type: req.body.type,
+            address: req.body.address,
         })
         .then(result => {
             res.render('home', {})
