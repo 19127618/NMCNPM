@@ -7,7 +7,7 @@
             <div class="card lg:mx-0 uk-animation-slide-bottom-small">
 
                 <div class="h-44 mb-4 md:h-72 overflow-hidden relative rounded-t-lg w-full">
-                    <img src="/public/assets/images/blog/img-5.jpg" alt="" class="w-full h-full absolute inset-0 object-cover">
+                    <img src="{{blog1.image}}" alt="" class="w-full h-full absolute inset-0 object-cover">
                 </div>
 
                 <div class="p-7">
@@ -68,7 +68,7 @@
                         <div class="flex-1">
                             <a href="/account/profile" class="text-base font-semibold capitalize hover:underline"> Ân Hận </a>
                             <div class="text-sm text-gray-500 mt-0.5"> 845K Following</div>
-                            <div class="text-sm text-gray-500 mt-0.5"> Ngày 9 tháng 11 năm 2021 lúc 20:30</div>
+                            <div class="text-sm text-gray-500 mt-0.5"> {{blog1.createdAt}}</div>
 
                         </div>
                         <a href="timeline-page.html"

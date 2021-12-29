@@ -17,7 +17,7 @@ class writeBlog{
             address: req.body.address,
         })
         .then(result => {
-            res.render('home', {})
+            res.redirect('/');
         })
         .catch(error => console.error(error))
 }}
