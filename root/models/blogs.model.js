@@ -19,7 +19,7 @@ const Blog_Place = new Schema({
     like: {type: Number},
     active: {type: Boolean, default: 1}, //1: active
     address: {type: String},
-    approve: {type: Boolean, default: 0},
+    approve: {type: Number, default: 0}, //0: chưa được duyệt, 1 là đã được duyệt, -1 là bị từ chối.
     comment: {type: [String]},
     number_of_save: {typeKey: Number},
     star: {

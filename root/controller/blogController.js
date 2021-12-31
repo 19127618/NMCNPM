@@ -3,7 +3,7 @@ import mongooseObject from '../ulti/mongoose.js'
 
 class blogController{
     async index(req, res, next){
-        blogsModel.find({})
+        blogsModel.find({approve: 1})
             .then( blog => {
                 res.render('home', {
                     blog: mongooseObject.multipleMongooseToObject(blog),
@@ -13,7 +13,6 @@ class blogController{
                 )}
             )
             .catch(error => next(error));
-
     }
 }
 
