@@ -7,7 +7,7 @@
             <div class="card lg:mx-0 uk-animation-slide-bottom-small">
 
                 <div class="h-44 mb-4 md:h-72 overflow-hidden relative rounded-t-lg w-full">
-                    <img src="{{blog1.image}}" alt="" class="w-full h-full absolute inset-0 object-cover">
+                    <img src="/public/assets/images/user_blog/{{blog1.blog_id}}/thumb.png" alt="" class="w-full h-full absolute inset-0 object-cover">
                 </div>
 
                 <div class="p-7">
@@ -77,8 +77,29 @@
                         </a>
                     </div>
 
+                    {{!-- address, place or blog --}}
+                    <div class="another-info d-md-flex flex-col flex-wrap justify-content-between w-100 m-0 mt-2">
+                        <div class="mt-2 mb-2 p-0 shadow-sm w-100 d-flex justify-content-center align-items-baseline border rounded">
+                            <i class="icon mx-2 fa fa-location-arrow fa-2x" style="color: #2a41e8"></i>
+                            <div class="">{{blog1.address}}</div>
+                        </div>
 
-                    <div class="space-y-3">
+                    </div>
+
+                    <!-- another info -->
+                    <div class="d-flex justify-content-between w-100">
+                        <div class="pv m-0 p-0 shadow-sm d-flex justify-content-center align-items-baseline border rounded">
+                            <i class="icon mx-2 fa fa-money fa-2x" style="color: #2bb351"></i>
+                            <div class="" style="width: calc(100% - 65px);">{{blog1.price}} {{blog1.priceUnit}}</div>
+                        </div>
+                        <div class="pv m-0 p-0 shadow-sm d-flex justify-content-center align-items-baseline border rounded">
+                            <i class="icon mx-2 fa fa-car fa-2x" style="color: #ffd100"></i>
+                            <div class="" style="width: calc(100% - 65px);">{{blog1.vehicle}}</div>
+                        </div>
+
+                    </div>
+
+                    <div class="space-y-3 mt-3">
                         {{{blog1.content}}}
                     </div>
 

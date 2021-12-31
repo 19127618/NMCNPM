@@ -22,6 +22,9 @@ router.get('/write', function (req, res, next){
 
 router.post('/write',urlencodedParser, writeBlog.index);
 
+router.post('/write', function (req,res) {
+   console.log(req.body);
+});
 
 
 

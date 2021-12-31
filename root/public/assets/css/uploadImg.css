@@ -124,5 +124,9 @@ option{
 
 .text-center {
     text-align: center;
+}
 
+.pv {
+    text-align: center;
+    width: 48%;
 }
