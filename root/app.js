@@ -2,6 +2,7 @@ import express from 'express'
 import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
+import * as fs from 'fs';
 import {upload, uploadImg} from './controller/uploadImgController.js';
 
 
@@ -40,4 +41,6 @@ const port = 3000;
 app.listen(port, function () {
     console.log(`Start listening at http://localhost:${port}`);
 })
+let dir = './public/tmpfile';
+
 

@@ -7,7 +7,7 @@
             <div class="card lg:mx-0 uk-animation-slide-bottom-small">
 
                 <div class="h-44 mb-4 md:h-72 overflow-hidden relative rounded-t-lg w-full">
-                    <img src="/public/assets/images/user_blog/{{blog1.blog_id}}/thumb.png" alt="" class="w-full h-full absolute inset-0 object-cover">
+                    <img src="/public/assets/images/user_blog/{{blog1.blog_id}}.jpeg" alt="" class="w-full h-full absolute inset-0 object-cover">
                 </div>
 
                 <div class="p-7">
@@ -107,7 +107,7 @@
 								<div class="flex items-center space-x-3">
 									<ion-icon name="wallet" class="bg-gray-100 text-blue-500 p-1.5 rounded-full text-xl"></ion-icon>
 									<div class="flex-1">
-										<div>Chi phí:  {{blog1.price}} {{blog1.priceUnit}}  </div>
+										<div>Chi phí:  {{format_number blog1.price blog1.priceUnit}} </div>
 									</div>
 								</div>
 

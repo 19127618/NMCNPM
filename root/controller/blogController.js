@@ -9,7 +9,7 @@ class blogController{
                     blog: mongooseObject.multipleMongooseToObject(blog),
                     user: req.user
                 },
-                console.log(blog)
+                // console.log(blog)
                 )}
             )
             .catch(error => next(error));

@@ -6,8 +6,8 @@ export default function (app) {
     app.engine('hbs', engine({
         extname: '.hbs',
         helpers: {
-            format_number(val) {
-                return numeral(val).format('0.0');
+            format_number(val, unit) {
+                return numeral(val).format('0,0') +' '+unit;
             },
             section: hbs_sections()
         }
