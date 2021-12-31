@@ -77,30 +77,48 @@
                         </a>
                     </div>
 
-                    {{!-- address, place or blog --}}
-                    <div class="another-info d-md-flex flex-col flex-wrap justify-content-between w-100 m-0 mt-2">
-                        <div class="mt-2 mb-2 p-0 shadow-sm w-100 d-flex justify-content-center align-items-baseline border rounded">
-                            <i class="icon mx-2 fa fa-location-arrow fa-2x" style="color: #2a41e8"></i>
-                            <div class="">{{blog1.address}}</div>
-                        </div>
-
-                    </div>
-
                     <!-- another info -->
-                    <div class="d-flex justify-content-between w-100">
-                        <div class="pv m-0 p-0 shadow-sm d-flex justify-content-center align-items-baseline border rounded">
-                            <i class="icon mx-2 fa fa-money fa-2x" style="color: #2bb351"></i>
-                            <div class="" style="width: calc(100% - 65px);">{{blog1.price}} {{blog1.priceUnit}}</div>
-                        </div>
-                        <div class="pv m-0 p-0 shadow-sm d-flex justify-content-center align-items-baseline border rounded">
-                            <i class="icon mx-2 fa fa-car fa-2x" style="color: #ffd100"></i>
-                            <div class="" style="width: calc(100% - 65px);">{{blog1.vehicle}}</div>
-                        </div>
+					<div class="md:py-8 py-3">
+						<h1 class="block text-xl font-bold mb-3"> Thông tin liên quan  </h1>
+						<div class="md:flex justify-evenly">
+							<div class="flex-1 grow space-y-4 mt-2">
+								<div class="flex items-center space-x-3">
+									<ion-icon name="location" class="bg-gray-100 text-green-500 p-1.5 rounded-full text-xl"></ion-icon>
+									<div class="flex-1">
+										<div>  <span href="#" class=""> Địa điểm: {{#if blog1.address}}{{blog1.address}}{{else}} Chưa cập nhật{{/if}} </span> </div>
+									</div>
+								</div>
 
-                    </div>
+								<div class="flex items-center space-x-3">
+									<ion-icon name="time" class="bg-gray-100 text-red-400 p-1.5 rounded-full text-xl"></ion-icon>
+									<div class="flex-1">
+										<div>  <span href="#" class=""> Thời gian: {{#if blog1.address}}{{blog1.address}}{{else}} Chưa cập nhật{{/if}} </span> </div>
+									</div>
+								</div>
+							</div>
+							<div class="flex-1 space-y-4 mt-2">
+
+								<div class="flex items-center space-x-3">
+									<ion-icon name="car" class="bg-gray-100 text-yellow-500 p-1.5 rounded-full text-xl"></ion-icon>
+									<div class="flex-1">
+										<div>  <a href="#">Phương tiện:  {{blog1.vehicle}} </a> </div>
+									</div>
+								</div>
+								<div class="flex items-center space-x-3">
+									<ion-icon name="wallet" class="bg-gray-100 text-blue-500 p-1.5 rounded-full text-xl"></ion-icon>
+									<div class="flex-1">
+										<div>Chi phí:  {{blog1.price}} {{blog1.priceUnit}}  </div>
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+					</div>
 
                     <div class="space-y-3 mt-3">
-                        {{{blog1.content}}}
+						{{{blog1.content}}}
                     </div>
 
                 </div>
