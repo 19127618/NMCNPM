@@ -46,18 +46,18 @@
 							<a href="/blog/detail/{{this.slug}}" class="text-xl font-semibold line-clamp-2"> {{this.title}}</a>
 							<p class="line-clamp-2 pt-3"> {{this.tinyDes}} </p>
 
-							<div class="flex items-center pt-3">
+							<div class="flex items-center pt-3 mb-auto">
 								<div class="flex items-center">
 									<ion-icon name="thumbs-up-outline" class="text-xl mr-2"></ion-icon>
-									{{this.numOfLike}}
+									{{#if this.numOfLike}}{{this.numOfLike}}{{else}}0{{/if}}
 								</div>
 								<div class="flex items-center mx-4">
 									<ion-icon name="chatbubble-ellipses-outline" class="text-xl mr-2"></ion-icon>
-									{{this.numOfComment}}
+									{{#if this.numOfComment}}{{this.numOfComment}}{{else}}0{{/if}}
 								</div>
 								<div class="flex items-center">
 									<ion-icon name="bookmark-outline" class="text-xl mr-2"></ion-icon>
-									{{this.numOfSave}}
+									{{#if this.this.numOfSave}}{{this.this.numOfSave}}{{else}}0{{/if}}
 								</div>
 							</div>
 
