@@ -13,7 +13,7 @@ class detailControlller {
                     blog1: mongooseObject.mongooseToObject(blog1),
                     user: req.user
                 },
-                console.log(blog1)
+                // console.log(blog1)
                 )}
             )
             .catch(error => next(error));
