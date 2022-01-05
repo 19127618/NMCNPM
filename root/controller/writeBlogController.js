@@ -11,8 +11,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 class writeBlog{
 
     async index(req, res, next){
+        const blog_id = uuidv4()
         await blogsModel.create({
-            blog_id: uuidv4(),
+            blog_id: blog_id,
             title: req.body.title,
             content: req.body.content,
             price: req.body.price,
@@ -55,7 +56,6 @@ class writeBlog{
                 })
             });
             return id;
-
         })
         .catch(error => console.error(error))
 }}
