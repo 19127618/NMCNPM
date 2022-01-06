@@ -27,6 +27,12 @@ class detailControlller {
 
     comment(req, res, next){
         console.log(req.body)
+        if(!(req.body.username)){
+            res.redirect(`/account/login`);
+        }
+
+        
+
         const newComment = {
             blog_id: req.body.blogId,
             content: req.body.contentComment,

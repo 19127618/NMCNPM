@@ -59,6 +59,7 @@
                 </div>
                 <div class="lg:mt-0 lg:w-96 md:w-1/2 sm:w-2/3 mt-10 w-full">
                     <form action="/account/login/signIn" method="post" class="p-6 space-y-4 relative bg-white shadow-lg rounded-lg">
+                        
                         <input
                                 name="email"
                                 type="email"
@@ -73,6 +74,12 @@
                                 placeholder=" Mật khẩu"
                                 class="with-border"
                         />
+                        {{#if wrongPassword}}
+                            <span class="text-red-500 text-center block">
+                                Sai tài khoản hoặc sai mật khẩu!
+                            </span>
+                        {{/if}}
+
                         <button
                                 type="submit"
                                 class="
@@ -118,7 +125,7 @@
                         nếu như bạn chỉ xem các bài viết và không muốn dùng các chức năng
                         khác ở thời điểm hiện tại
                     </div>
-                </div>
+                </span>
             </div>
         </div>
 

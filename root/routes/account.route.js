@@ -5,9 +5,16 @@ import passport from "../passport/index.js";
 const router = express.Router();
 
 router.get('/login', function (req, res){
-    res.render('vwAccount/login', {
-        layout: false
-    });
+    const wrongPassword = req.query['wrong-password'] !== undefined;
+    if(wrongPassword)
+        res.render('vwAccount/login', { wrongPassword});
+
+
+    else
+        res.render('vwAccount/login', {
+            layout: false
+        }
+    );
 });
 
 router.get('/profile', function (req, res) {
@@ -25,7 +32,7 @@ router.get('/profile', function (req, res) {
 
 router.post('/login/signIn', function(req, res, next) {
     passport.authenticate('local-login', function(err, user, info) {
-        if (!user) { return res.redirect('/auth/login?wrong-password'); }
+        if (!user) { return res.redirect('/account/login?wrong-password'); }
         req.logIn(user, function(err) {
             if (err) { return next(err); }
             return res.redirect('/');
