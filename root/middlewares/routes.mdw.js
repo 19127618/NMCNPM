@@ -4,10 +4,24 @@ import adminRoute from '../routes/admin.route.js'
 import {upload, uploadImg} from '../controller/uploadImgController.js'
 import blog from '../controller/blogController.js';
 
+import session from 'express-session';
+import passport from '../passport/index.js';
+
 export default function (app) {
     // app.get('/', function (req, res) {
     //    res.render('home')
     // });
+    // temp--------------------------------------------------------------------
+    app.use(session({
+        secret: "my-super-secret-key",
+        // resave: true,
+        // saveUninitialized: true,
+        // cookie: {maxAge: 60000}
+    }));
+    app.use(passport.initialize());
+    app.use(passport.session());
+// temp--------------------------------------------------------------------
+
     app.get('/', blog.index);
 
 

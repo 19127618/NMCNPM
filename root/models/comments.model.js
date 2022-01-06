@@ -6,6 +6,7 @@ const {Schema} = mongoose;
 const Comment = new Schema({
     blog_id: {type: String, required: true},
     user_id: {type: String},
+    username: {type: String},
     star: {
         voters: [String],
         scores: [Number]

@@ -11,10 +11,10 @@ const account = new Schema({
     email: { type : String , required: true , unique: true},
     password: { type : String , required: true},
     phone: { type : String },
-    role: {type: Boolean , default: 0}, //0: user, 1: admin
+    role: {type: Boolean , default: false}, //0: user, 1: admin
     fullname: { type : String },
     address: { type : String },
-    block: { type : Boolean , default: 0}, //0: active, 1: blocked
+    block: { type : Boolean , default: true}, //0: active, 1: blocked
     avatar: {type: String},
     coverImg: {type: String},
     followers: {type: [String]},
@@ -35,4 +35,5 @@ account.plugin(uniqueValidator);
 // }
 
 // module.exports = mongoose.model('Accounts', Account);
+
 export default mongoose.model('accounts', account);

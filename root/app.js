@@ -3,8 +3,8 @@ import {dirname} from 'path'
 import {fileURLToPath} from "url";
 import morgan from "morgan";
 import * as fs from 'fs';
-import {upload, uploadImg} from './controller/uploadImgController.js';
-
+import session from 'express-session';
+import passport from './passport/index.js';
 
 // temp--------------------------------------------------------------------
 
@@ -35,6 +35,14 @@ activate_view_middleware(app);
 activate_route_middleware(app);
 
 // temp--------------------------------------------------------------------
+app.use(session({
+    secret: "my-super-secret-key",
+    // resave: true,
+    // saveUninitialized: true,
+    // cookie: {maxAge: 60000}
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 // temp--------------------------------------------------------------------
 
 const port = 3000;

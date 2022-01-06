@@ -75,8 +75,15 @@
 
 								<div class="capitalize flex font-semibold hidden lg:block my-2 space-x-3 text-center text-sm">
 									<!--                            <a href="/account/login" class="py-3 px-4">Login</a>-->
-									<a href="/account/login"
-									   class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Login</a>
+									{{#if user}}
+										<a href="/account/logout"
+										class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Logout
+										</a>
+									{{else}}
+										<a href="/account/login"
+										class="bg-purple-500 purple-500 px-6 py-3 rounded-md shadow text-white">Login
+										</a>
+									{{/if}}
 								</div>
 
 							</div>
