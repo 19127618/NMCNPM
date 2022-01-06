@@ -20,25 +20,13 @@ import mongooseObject from '../ulti/mongoose.js'
         approve = req.query['approve'];
         const id = req.query['id'];
 
-        console.log(approve, id)
+        // console.log(approve, id)
 
         await blogsModel.updateOne({blog_id: id}, {approve: approve})
             .then( blog =>{
                 res.redirect('/admin/blog')
             })
             .catch(error => next(error));
-
-    //     blogsModel.find({approve: 0})
-    //         .then( blog => {
-    //             res.render('vwAdmin/blog', {
-    //                 blog: mongooseObject.multipleMongooseToObject(blog),
-    //                 user: req.user
-    //             },
-    //             console.log(blog)
-    //             )}
-    //         )
-    //         .catch(error => next(error));
-    // }
     }
 
 export {index, approve};

@@ -1,8 +1,11 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema
+import mongoose from 'mongoose';
+
+const {Schema} = mongoose;
+
 
 const Comment = new Schema({
-    user_id: {type: String, required: true},
+    blog_id: {type: String, required: true},
+    user_id: {type: String},
     star: {
         voters: [String],
         scores: [Number]
@@ -11,4 +14,4 @@ const Comment = new Schema({
     reply: {type: String},
     content: {type: String},
 });
-module.exports = mongoose.model('Comments', Comment);
+export default mongoose.model('Comments', Comment);

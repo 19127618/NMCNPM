@@ -16,6 +16,11 @@ router.get('/detail/:slug', detailBlog.show);
 // function (req, res){
 //     res.render('vwBlog/detail-blog');
 // });
+router.post('/detail/:slug/comment', detailBlog.comment);
+
+
+
+
 
 router.get('/forum', function (req, res) {
     res.render('vwBlog/forum');
