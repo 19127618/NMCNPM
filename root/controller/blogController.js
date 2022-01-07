@@ -13,6 +13,10 @@ class blogController{
                 )}
             )
             .catch(error => next(error));
+    };
+
+    findKey(keyword){
+        return blogsModel.find({$text:{$search: keyword}});
     }
 }
 

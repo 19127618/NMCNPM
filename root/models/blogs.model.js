@@ -38,6 +38,7 @@ const Blog_Place = new Schema({
 
 // Add plugin
 Blog_Place.plugin(slug);
+Blog_Place.index({title: 'text', content: 'text'});
 
 //collection name, with SINGULAR NOUN and name on the database will be the PLURAL NOUN
 // module.exports = mongoose.model('Blogs', Blog);

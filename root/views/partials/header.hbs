@@ -41,7 +41,7 @@
                         </span>
 
 							<div id="logo">
-								<a href="blogs.html">
+								<a href="/">
 									<img src="/public/assets/images/logo.png" alt="">
 									<img src="/public/assets/images/logo-mobile.png" class="logo_mobile" alt="">
 								</a>
@@ -51,20 +51,15 @@
 						<!-- search icon for mobile -->
 						<div class="header-search-icon" uk-toggle="target: #wrapper ; cls: show-searchbox"></div>
 						<div class="header_search"><i class="uil-search-alt"></i>
-							<input value="" type="text" class="form-control"
-								   placeholder="Tìm kiếm bài viết, tác giả, địa điểm ..." autocomplete="off">
+							<form action="/blog/search" method="get">
+								<input value="" type="text" class="form-control"
+									   placeholder="Tìm kiếm bài viết, tác giả, địa điểm ..." name="keyword" autocomplete="off">
+							</form>
+
 							<div uk-drop="mode: click" class="header_search_dropdown">
 
 								<h4 class="search_title"> Recently </h4>
-								<ul>
-									<li>
-										<a href="#">
-											<img src="/public/assets/images/avatars/avatar-1.jpg" alt=""
-												 class="list-avatar">
-											<div class="list-name"> Ân Phạm</div>
-										</a>
-									</li>
-								</ul>
+
 
 							</div>
 						</div>
