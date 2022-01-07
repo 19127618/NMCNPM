@@ -20,11 +20,11 @@
 		<div class="mt-4 mb-5">
 			<form action="/blog/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center"
 				  method="post" enctype="multipart/form-data">
-				  <input type="text" name="userId" value="{{user.email}}" required>
+				  <input type="hidden" name="userId" value="{{user.email}}" required>
 
 				<div class="d-md-flex flex-col align-items-center w-100">
 					<!-- post title -->
-					<div class="title d-md-flex align-items-center" style="width: 100%;">
+					<div class="title d-md-flex align-items-center mb-2" style="width: 100%;">
 						<input id="title" name="title" type="text" placeholder="Post title"
 							   class="p-title-input shadow-sm a-shadow" required></input>
 					</div>
@@ -68,7 +68,7 @@
                     </span>
 					</div>
 					<div class="vehical m-0 p-0">
-						<select name="vehicle" id="vehicle" vehicle class="shadow-sm text-center">
+						<select name="vehicle" id="vehicle" vehicle class="shadow-sm text-center" required>
 							<option value="" disabled selected hidden>Select</option>
 							<option value="Đi bộ">Đi bộ</option>
 							<option value="Xe đạp">Xe đạp</option>
