@@ -1,5 +1,6 @@
 import blogsModel from "../models/blogs.model.js";
-import mongooseObject from '../ulti/mongoose.js'
+import mongooseObject from '../ulti/mongoose.js';
+import accountsModel from "../models/accounts.model.js";
 
 class blogController{
     async index(req, res, next){

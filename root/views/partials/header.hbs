@@ -128,16 +128,20 @@
 							</svg>
 							<span> forum</span> </a>
 						</li>
-						<li class="more-view" hidden><a href="/admin/blog">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-pink-500">
-								<path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
-								<path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-							</svg>
-							<span>  Phê duyệt bài viết</span></a>
-						</li>
+
+						{{#if user.role}}
+							<li class="more-view"><a href="/admin/blog">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-pink-500">
+									<path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+									<path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+								</svg>
+								<span>  Phê duyệt bài viết</span></a>
+							</li>
+						{{/if}}
+
 					</ul>
 
-					<a href="#" class="see-mover h-10 flex my-1 pl-2 rounded-xl text-gray-600"
+					{{!-- <a href="#" class="see-mover h-10 flex my-1 pl-2 rounded-xl text-gray-600"
 					   uk-toggle="target: .more-view; animation: uk-animation-fade">
                     <span class="w-full flex items-center more-view">
                         <svg class="  bg-gray-100 mr-2 p-0.5 rounded-full text-lg w-7" fill="currentColor"
@@ -153,7 +157,7 @@
 																						  clip-rule="evenodd"></path></svg>
                         Thu gọn
                     </span>
-					</a>
+					</a> --}}
 
 					<!--            <h3 class="side-title"> Danh bạ </h3>-->
 
