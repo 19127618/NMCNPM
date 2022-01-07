@@ -1,7 +1,6 @@
 import accountRoute from '../routes/account.route.js';
 import blogRoute from '../routes/blog.route.js';
 import adminRoute from '../routes/admin.route.js'
-import {upload, uploadImg} from '../controller/uploadImgController.js'
 import blog from '../controller/blogController.js';
 
 import session from 'express-session';

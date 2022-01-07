@@ -24,7 +24,8 @@ function (req, email, password, done) { // callback với email và password t�
             return done(null, false, {message: 'Incorrect username.'});
         }
         if(user.block){
-            return done(null, false, {message: 'blocked.'});
+            
+            return done('blocked', false, {message: 'blocked'});
         }
         if (user.password !== password){
             return done(null, false, {message: 'Incorrect password.'});

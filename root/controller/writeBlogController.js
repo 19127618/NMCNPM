@@ -15,6 +15,7 @@ class writeBlog{
         return await blogsModel.create({
             blog_id: blogInfo.id,
             user_id: req.body.userId,
+            username: req.body.username,
             title: req.body.title,
             content: req.body.content,
             price: req.body.price,

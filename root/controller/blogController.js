@@ -1,14 +1,14 @@
 import blogsModel from "../models/blogs.model.js";
 import mongooseObject from '../ulti/mongoose.js';
-import accountsModel from "../models/accounts.model.js";
 
 class blogController{
     async index(req, res, next){
         blogsModel.find({approve: 1})
-            .then( blog => {
+            .then( async blog => {
+
                 res.render('home', {
                     blog: mongooseObject.multipleMongooseToObject(blog),
-                    user: req.user
+                    user: req.user,
                 },
                 // console.log(req.user)
                 )}

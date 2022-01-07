@@ -21,6 +21,7 @@
 			<form action="/blog/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center"
 				  method="post" enctype="multipart/form-data">
 				  <input type="hidden" name="userId" value="{{user.email}}" required>
+				  <input type="hidden" name="username" value="{{user.fullname}}" required>
 
 				<div class="d-md-flex flex-col align-items-center w-100">
 					<!-- post title -->

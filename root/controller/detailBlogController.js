@@ -17,16 +17,15 @@ class detailControlller {
         blogsModel.findOne({slug: req.params.slug})
             .then( async blog => {
                                 
-                const author = await accountsModel.findOne({email: blog.user_id}).lean();
-                console.log("\n\n",author,"\n\n")
+                // const author = await accountsModel.findOne({email: blog.user_id}).lean();
+                // console.log("\n\n",author,"\n\n")
 
                 res.render('vwBlog/detail-blog', {
                     blog: mongooseObject.mongooseToObject(blog),
                     user: req.user,
-                    author: author,
                     comment: comments
                 },
-                console.log(req.user)
+                console.log(blog)
                 )
             }
             )

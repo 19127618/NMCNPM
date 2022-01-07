@@ -6,13 +6,22 @@ const router = express.Router();
 
 router.get('/login', function (req, res){
     const wrongPassword = req.query['wrong-password'] !== undefined;
-    if(wrongPassword)
-        res.render('vwAccount/login', { layout: false,
-            wrongPassword});
+    const blocked = req.query['blocked'] !== undefined;
 
+    if(wrongPassword)
+        return res.render('vwAccount/login', { 
+            layout: false,
+            wrongPassword,
+        });
+
+    if(blocked)
+        return res.render('vwAccount/login', { 
+            layout: false,
+            blocked,
+        });
 
     else
-        res.render('vwAccount/login', {
+        return res.render('vwAccount/login', {
             layout: false
         }
     );
@@ -33,6 +42,9 @@ router.get('/profile', function (req, res) {
 
 router.post('/login/signIn', function(req, res, next) {
     passport.authenticate('local-login', function(err, user, info) {
+        if (err == "blocked"){
+            return res.redirect('/account/login?blocked');
+        }
         if (!user) { return res.redirect('/account/login?wrong-password'); }
         req.logIn(user, function(err) {
             if (err) { return next(err); }
