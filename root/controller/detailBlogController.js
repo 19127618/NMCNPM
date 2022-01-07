@@ -28,7 +28,8 @@ class detailControlller {
     comment(req, res, next){
         console.log(req.body)
         if(!(req.body.username)){
-            res.redirect(`/account/login`);
+            return res.redirect(`/account/login`);
+            
         }
 
         

@@ -247,7 +247,7 @@
                 <div class="space-y-5">
                     <!-- add comment -->
                     <form action="/blog/detail/{{blog.slug}}/comment" method="post" class="bg-gray-100 rounded-full relative dark:bg-gray-800 border-t">
-                        <input type="text" placeholder="Bình luận ..." class="bg-transparent max-h-10 shadow-none px-5" name="contentComment">
+                        <input type="text" placeholder="Bình luận ..." class="bg-transparent max-h-10 shadow-none px-5" name="contentComment" required>
                         <input type="hidden" name="blogId" value="{{blog.slug}}">
                         <input type="hidden" name="username" value="{{user.fullname}}">
                         <input type="hidden" name="userId" value="{{user.userId}}">

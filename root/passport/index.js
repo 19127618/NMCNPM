@@ -17,7 +17,7 @@ function (req, email, password, done) { // callback với email và password t�
     // we are checking to see if the user trying to login already exists
     // tìm một user với email
     // chúng ta sẽ kiểm tra xem user có thể đăng nhập không
-    User.findOne({'local.email': email}, function (err, user) {
+    User.findOne({email: email}, function (err, user) {
         if (!user) {
             return done(null, false, {message: 'Incorrect username.'});
         }
@@ -26,6 +26,8 @@ function (req, email, password, done) { // callback với email và password t�
             return done(null, false, {message: 'Incorrect password.'});
         }
         
+        console.log(user)
+
         return done(null, user);
     });
 })
