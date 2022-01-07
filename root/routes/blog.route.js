@@ -3,8 +3,10 @@ import detailBlog from '../controller/detailBlogController.js';
 import bodyParser from "body-parser";
 import writeBlog from '../controller/writeBlogController.js';
 import multer from "multer";
+import Blog from '../controller/blogController.js'
 import fs from "fs";
 import { v4 as uuidv4 } from 'uuid';
+import mongooseObject from '../ulti/mongoose.js'
 
 
 const router = express.Router();
@@ -81,5 +83,9 @@ router.post('/write',  (req, res)=> {
     res.redirect('/');
 });
 
+router.get('/search', async function (req, res){
+    const list = await Blog.findKey(req.query.keyword);
+    res.render('home',{blog: mongooseObject.multipleMongooseToObject(list)});
+})
 
 export default router;
