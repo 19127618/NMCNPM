@@ -7,7 +7,8 @@ const router = express.Router();
 router.get('/login', function (req, res){
     const wrongPassword = req.query['wrong-password'] !== undefined;
     if(wrongPassword)
-        res.render('vwAccount/login', { wrongPassword});
+        res.render('vwAccount/login', { layout: false,
+            wrongPassword});
 
 
     else
