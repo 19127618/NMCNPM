@@ -20,6 +20,7 @@
 		<div class="mt-4 mb-5">
 			<form action="/blog/write" class="form-group flex-sm-column d-flex flex-wrap justify-content-center"
 				  method="post" enctype="multipart/form-data">
+				  <input type="text" name="userId" value="{{user.email}}" required>
 
 				<div class="d-md-flex flex-col align-items-center w-100">
 					<!-- post title -->

@@ -18,15 +18,18 @@ function (req, email, password, done) { // callback với email và password t�
     // tìm một user với email
     // chúng ta sẽ kiểm tra xem user có thể đăng nhập không
     User.findOne({email: email}, function (err, user) {
+        console.log(user)
+        
         if (!user) {
             return done(null, false, {message: 'Incorrect username.'});
         }
-
+        if(user.block){
+            return done(null, false, {message: 'blocked.'});
+        }
         if (user.password !== password){
             return done(null, false, {message: 'Incorrect password.'});
         }
         
-        console.log(user)
 
         return done(null, user);
     });
@@ -38,7 +41,8 @@ passport.serializeUser(function(user, done) {
     done(null, {
         email: user.email,
         role: user.role,
-        fullname: user.fullname
+        block: user.block,
+        fullname: user.fullname,
     });
 });
 

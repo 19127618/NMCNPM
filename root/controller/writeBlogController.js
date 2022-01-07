@@ -11,8 +11,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 class writeBlog{
 
     async index(req, blogInfo,next){
+        // console.log("\n",req.body,"\n")
         return await blogsModel.create({
             blog_id: blogInfo.id,
+            user_id: req.body.userId,
             title: req.body.title,
             content: req.body.content,
             price: req.body.price,

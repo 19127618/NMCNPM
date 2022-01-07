@@ -27,7 +27,10 @@ router.get('/forum', function (req, res) {
 });
 
 router.get('/write', function (req, res, next) {
-    res.render('vwBlog/write-blog');
+    if(!req.user){
+        return res.redirect('/account/login');
+    }
+    return res.render('vwBlog/write-blog', {user: req.user});
     // res.render('vwBlog/createBlog');
 });
 
@@ -65,13 +68,13 @@ router.post('/write',  (req, res)=> {
         } else if (err) {
             console.log(err);
         }
-        console.log(req.file)
+        // console.log(req.file)
         const blogInfo = {
             id: idBlog,
-            imageName: req.file.filename
+            imageName: req.file.filename,
         }
         // Everything went fine.
-        console.log(blogInfo);
+        // console.log(blogInfo);
         writeBlog.index(req, blogInfo);
 
     })
