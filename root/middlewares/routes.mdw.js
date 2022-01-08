@@ -23,6 +23,11 @@ export default function (app) {
 
     app.get('/', blog.index);
 
+    app.get('/about', function (req, res) {
+        res.render('about', {
+            layout: false
+        });
+    });
 
     app.use('/account', accountRoute);
     app.use('/blog', blogRoute);
